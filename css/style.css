@@ -1,10 +1,11 @@
 :root{
     --primary-color: #1c1c1e;
     --secondary-color: #000000;
-    --tertiary-color: rgba(28,28,30,255);
-    --text-color: rgb(199, 199, 199);
+    --tertiary-color: #313035;
+    --text-color: #ffffff;
     --primary-accent-color: #0b84fe;
     --secondary-accent-color: #2ed158;
+    --gray-color: rgba(30,30,31,255);
 }
 body, html {
     height: 100%;
@@ -13,6 +14,7 @@ body, html {
   
 * {
     box-sizing: border-box;
+    /* outline: red 1px solid; */
 }
 body{
     background-color: var(--secondary-color);
@@ -36,4 +38,42 @@ li{
 /* Layout */
 .site-header{
     margin-top: 1em;
+    border-bottom: 1px solid var(--gray-color);
+}
+
+.calc-content{
+    margin-top: 1em;
+}
+
+.calc-content > div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.field-title{
+    width: 30%;
+    white-space: nowrap;
+}
+.field-input{
+    width: 70%;
+    border-bottom: 1px solid var(--gray-color);
+    display: flex;
+    justify-content: center;
+    padding: 1em 0;
+}
+
+.input{
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: .3em 1em;
+}
+
+
+/* Color */
+.input-color{
+    color: var(--text-color);
+    background-color: var(--tertiary-color);
+    
 }
